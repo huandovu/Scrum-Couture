@@ -1,0 +1,128 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.home-button {
+  font-size: 30px;
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: inherit;
+  font-family: monospace;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+}
+
+.home-button:hover {
+  background-color: #eee;
+  line-height: 40px;
+}
+
+.paragraph-intros {
+  font-size: 22px;
+  text-align: center;
+  line-height: 2;
+  color: black;
+  margin: 50px;
+  font-family: monospace;
+}
+
+.about-paragraph {
+  font-size: 16px;
+  text-align: center;
+  line-height: 2;
+  color: black;
+  margin: 50px;
+  font-family: monospace;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 100px;
+}
+
+.home-page-images-container {
+  text-align: center;
+  /* Center the inline-block elements horizontally */
+}
+
+.home-page-images {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  margin: 20px;
+  display: inline-block;
+}
+.box {
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+  
+}
+
+.filterBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filterImages {
+  width: 440px;
+  aspect-ratio: auto 440 / 480;
+  height: 480px;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.bottom {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  /*height: 70px;*/
+}
+
+#root{
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr) ;
+}
+.contant{
+	width: 100%;
+  position: absolute;
+	right: 0;
+}
+
+.category-btn {
+  cursor: pointer;
+  font-family: monospace;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.cart-btn {
+  cursor: pointer;
+  color: white;
+  border: none;
+  background-color: #0f3018;
+  padding: 5px;
+}
+
+@media (min-width: 768px) {
+  .clothing-item {
+    flex: 0 0 calc(33.33% - 20px);
+  }
+}

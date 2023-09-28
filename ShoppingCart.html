@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Shopping Cart - Scrum Couture</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <button class="home-button" onclick="window.location='index.html'">Scrum Couture</button>
+    <h1>Shopping Cart</h1>
+
+    <!-- Cart Items List -->
+    <div class="cart-list">
+        <h2>Cart Contents</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be dynamically generated here -->
+        </ul>
+        <hr>
+        <p>Total: <span id="cart-total">$0.00</span></p>
+    </div>
+
+    <script>
+        // Function to update the cart contents
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+
+            // Clear the current cart items
+            cartItems.innerHTML = '';
+
+            // Calculate the total price
+            let total = 0;
+
+            // Iterate through the shoppingCart array
+            for (const item of shoppingCart) {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.name}: $${item.price.toFixed(2)}`;
+                cartItems.appendChild(listItem);
+                total += item.price;
+            }
+
+            // Update the total price
+            cartTotal.textContent = `$${total.toFixed(2)}`;
+        }
+
+        // Call the updateCart function when the page loads
+        window.addEventListener('load', updateCart);
+    </script>
+    <script src="cart.js"></script>
+</body>
+</html>
