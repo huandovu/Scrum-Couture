@@ -136,3 +136,76 @@ body {
   margin-right: 10px;
 }
 
+.intro-text {
+  text-align: center;
+  max-width: 800px; 
+  margin: 60px auto; /* Adds space above and below, and centers horizontally */
+  font-style: italic; 
+  font-size: 18px;
+}
+
+/* Styles for the lookbook gallery container */
+.lookbook-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Styles for each lookbook item */
+.lookbook-item {
+  position: relative; /* for hover overlay positioning */
+  flex: 0 0 calc(33.33% - 20px); /* 33.33% width with some spacing */
+  margin: 30px 10px;
+  overflow: hidden; /* To keep hover effect within boundaries */
+}
+
+.lookbook-item img {
+  width: 100%;
+  transition: transform 0.3s; 
+}
+
+/* Hover effect: Overlay */
+.lookbook-item .hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(182, 181, 181, 0.6); 
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Hover effect: Image Zoom */
+.lookbook-item:hover img {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .lookbook-item {
+      flex: 0 0 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .lookbook-item {
+      flex: 0 0 100%;
+  }
+}
+
+/* Makes iamges appear 1 by 1 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.lookbook-item img {
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+
+}
+
+
