@@ -126,3 +126,13 @@ body {
     flex: 0 0 calc(33.33% - 20px);
   }
 }
+
+.cart-icon {
+  float: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 30%;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
