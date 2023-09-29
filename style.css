@@ -29,6 +29,23 @@ body {
   line-height: 40px;
 }
 
+.styled-button { 
+  display: inline-block
+  background-color: ##FDFCFB;  
+  color: #050505;             
+  border: none;            
+  padding: 10px 20px;      
+  font-size: 17px;         
+  cursor: pointer;         
+  transition: background-color 0.3s;  
+  margin-right: 10px;      
+  border-radius: 10px;      
+}
+
+.styled-button:hover {
+  background-color: #dfdcdc;  
+}
+
 .paragraph-intros {
   font-size: 22px;
   text-align: center;
@@ -52,7 +69,6 @@ body {
 
 .home-page-images-container {
   text-align: center;
-  /* Center the inline-block elements horizontally */
 }
 
 .home-page-images {
@@ -96,9 +112,9 @@ body {
 /* Styles for each lookbook item */
 .lookbook-item {
   position: relative; /* for hover overlay positioning */
-  flex: 0 0 calc(33.33% - 20px); /* 33.33% width with some spacing */
+  flex: 0 0 calc(33.33% - 20px); 
   margin: 30px 10px;
-  overflow: hidden; /* To keep hover effect within boundaries */
+  overflow: hidden; 
 }
 
 .lookbook-item img {
