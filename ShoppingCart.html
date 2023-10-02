@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width">
     <title>Shopping Cart - Scrum Couture</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+<style>
+
+    #addressButton{
+        width: 340px;
+
+    }
+</style>
+
 </head>
 <body>
     <button class="home-button" onclick="window.location='index.html'">Scrum Couture</button>
@@ -18,6 +26,65 @@
         </ul>
         <hr>
         <p>Total: <span id="cart-total">$0.00</span></p>
+
+        <hr>
+        <form>
+
+            <table>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                </tr>
+                <tr>                 
+                    <td><input type="text"></td>
+                    <td><input type="text"></td>
+                </tr>
+            </table>
+
+            <table >
+                <tr>
+                    <th>
+                        Address
+                    </th>
+                </tr>
+                <tr>
+                   <td><input id = "addressButton" type="text" placeholder="Enter Street Address"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="City, state, ZIP">
+                    </td>       
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <th> Card Information</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Card Number">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="Expiration date">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" placeholder="CVV">
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+       
+       
+        <button onclick= "checkout()"> checkout</button>
+
+
     </div>
 
     <script src="cart.js"></script>

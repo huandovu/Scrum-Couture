@@ -1,4 +1,4 @@
-const shoppingCart = loadCartFromLocalStorage(); // Load cart data from local storage
+let shoppingCart = loadCartFromLocalStorage(); // Load cart data from local storage
 
 // Function to add an item to the cart
 function addToCart(itemName, itemPrice) {
@@ -46,5 +46,23 @@ function saveCartToLocalStorage() {
     localStorage.setItem('shoppingCart', JSON.stringify(shoppingCart));
 }
 
+function checkout()
+{
+    clearInputFields();
+    shoppingCart = [];
+    updateCart();
+    localStorage.removeItem('shoppingCart');
+    console.log("checkout completed");
+    alert(' Checkout completed ');
+}
+
+function clearInputFields() {
+    const inputElements = document.querySelectorAll('input');
+    inputElements.forEach((input) => {
+        input.value = ''; // Use '=' to assign an empty string
+    });
+}
+
 // Call the updateCart function when the page loads
 window.addEventListener('load', updateCart);
+
