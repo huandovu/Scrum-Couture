@@ -30,13 +30,15 @@ body {
 
 .home-button:hover {
   background-color: #eee;
-  line-height: 40px;
 }
+ .catalog-header {
+  font-family: "Lucida Console", "Courier New", monospace;
+ }
 
 .styled-button { 
-  font-family: 'italic';
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;         
-  background-color: ##FDFCFB;  
+  background-color: #FDFCFB;  
   color: #050505;             
   border: none;            
   padding: 10px 20px;      
