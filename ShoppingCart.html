@@ -20,33 +20,13 @@
         <p>Total: <span id="cart-total">$0.00</span></p>
     </div>
 
-    <script>
-        // Function to update the cart contents
-        function updateCart() {
-            const cartItems = document.getElementById('cart-items');
-            const cartTotal = document.getElementById('cart-total');
-
-            // Clear the current cart items
-            cartItems.innerHTML = '';
-
-            // Calculate the total price
-            let total = 0;
-
-            // Iterate through the shoppingCart array
-            for (const item of shoppingCart) {
-                const listItem = document.createElement('li');
-                listItem.textContent = `${item.name}: $${item.price.toFixed(2)}`;
-                cartItems.appendChild(listItem);
-                total += item.price;
-            }
-
-            // Update the total price
-            cartTotal.textContent = `$${total.toFixed(2)}`;
-        }
-
-        // Call the updateCart function when the page loads
-        window.addEventListener('load', updateCart);
-    </script>
     <script src="cart.js"></script>
+<script>
+    // Call the loadCartFromLocalStorage function when the page loads
+    window.addEventListener('load', () => {
+        loadCartFromLocalStorage();
+        updateCart(); // Assuming you also want to update the cart display
+    });
+</script>
 </body>
 </html>
