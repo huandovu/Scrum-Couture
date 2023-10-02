@@ -22,6 +22,10 @@ body {
   display: inline-block;
   margin: 4px 2px;
   transition-duration: 0.4s;
+  justify-content: center;
+  margin: 0 auto;
+  display:block;
+  margin-top: 40px;  
 }
 
 .home-button:hover {
@@ -207,5 +211,12 @@ body {
   transition: opacity 3s ease-in-out;
 
 }
+
+.hamburger-menu {
+  height: 35px;
+  width:30px;
+  float:left;
+  margin-left: 35px;
+} 
 
 
