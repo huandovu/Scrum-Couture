@@ -2,10 +2,10 @@ let shoppingCart = loadCartFromLocalStorage(); // Load cart data from local stor
 
 // Function to add an item to the cart
 function addToCart(itemName, itemPrice) {
-    // Add the item to the shopping cart array
+    
     shoppingCart.push({ name: itemName, price: itemPrice });
 
-    // Save the updated cart to local storage
+    
     saveCartToLocalStorage();
 
     alert(`${itemName} added to the cart.`);
@@ -17,7 +17,7 @@ function updateCart() {
     const cartList = document.getElementById('cart-items');
     const cartTotal = document.getElementById('cart-total');
 
-    // Clear the existing cart items
+
     cartList.innerHTML = '';
 
     // Iterate through the shoppingCart array and create list items for each item
@@ -27,11 +27,11 @@ function updateCart() {
         listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
         cartList.appendChild(listItem);
 
-        // Calculate the total price
+        
         total += item.price;
     });
 
-    // Update the cart total
+    
     cartTotal.textContent = `$${total.toFixed(2)}`;
 }
 
@@ -59,10 +59,10 @@ function checkout()
 function clearInputFields() {
     const inputElements = document.querySelectorAll('input');
     inputElements.forEach((input) => {
-        input.value = ''; // Use '=' to assign an empty string
+        input.value = ''; 
     });
 }
 
-// Call the updateCart function when the page loads
+
 window.addEventListener('load', updateCart);
 
